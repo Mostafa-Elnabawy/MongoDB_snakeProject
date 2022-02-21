@@ -1,5 +1,5 @@
 import uuid
-from typing import Callable, Any, Optional
+from typing import Callable, Any
 
 
 class switch:
@@ -33,7 +33,7 @@ class switch:
         """
         self.case(switch.__default, func)
 
-    def case(self, key, func: Callable[[], Any], fallthrough: Optional[bool] = False):
+    def case(self, key, func: Callable[[], Any], fallthrough=False):
         """
             Specify a case for the switch block:
 
